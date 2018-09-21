@@ -1,0 +1,51 @@
+﻿<html>
+	<head>
+		<script src="scripts/jquery.min.js"></script>
+		<script>
+			var  i =0;
+		
+			function a(){
+				var user = $("#user").val();
+				var email = $("#email").val();
+				var tel = $("#tel").val();	
+				var add = "<tr id='"+i+"'><td align='center'>"
+				          +user+
+						  "</td><td align='center'>"
+						  +email+
+						  "</td><td align='center'>"
+						  +tel+
+						  "</td><td align='center'>"
+						  +"<a href='javascript:;' onclick='b("+i+")'>delete</a>"+
+						  "</td></tr>";
+				$("#div2 table").append(add);
+				i++;
+			}
+			
+			function b(del){
+				$("#"+del).remove();
+			}
+			
+		</script>
+	</head>
+	
+	<body>
+		<div id="div1">
+			<p style="text-align:center;">添加用户</p>
+			<p style="text-align:center;">
+				用户<input type="text" id="user"/>
+				eamil<input type="text" id="email"/>
+				手机<input type="text" id="tel"/>
+			</p>
+			<p style="text-align:center;">
+				<input type = "button" value="提交" onclick="a()"/>
+			</p>
+		</div>
+		<hr>
+		<div id="div2">
+			<table width="500px;" border="1" align="center">
+				<tr><th>用户名</th><th>email</th><th>电话号码</th><th></th></tr>
+				<tr><td align="center">user</td><td align="center">email</td><td align="center">telphone</td><td align="center">delete</td></tr>
+			</table>
+		</div>
+	</body>
+</html>

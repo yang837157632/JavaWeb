@@ -1,0 +1,40 @@
+﻿<html>
+	<head>
+		<script src="scripts/jquery.min.js"></script>
+		<script>
+		
+			function a(){
+				var a = $("#div1 ul li");
+				for(i=0;i<a.length;i++){
+					alert($(a[i]).text());
+				}
+			}
+			
+			function b(){
+				var a = $("#div1 ul li");
+				a.each(function(i,data){
+					alert(data.value+" "+i);
+				});
+			}
+		</script>
+		
+
+	</head>
+	
+	<body>
+		<div id="div1" style="color:red;">
+			<ul>
+				<li value="1">军委主席</li>
+				<li value="2">国家主席</li>
+				<li value="3">中央主席</li>
+				<li value="4">党校主席</li>
+				<li value="5">人大主席</li>
+			</ul>
+		</div>
+		
+		<div>
+			<input type="button" value="A" onclick="a()"/> <br>
+			<input type="button" value="B" onclick="b()"/> <br>
+		</div>
+	</body>
+</html>

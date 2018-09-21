@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>checkbox</title>
+
+<script type="text/javascript">
+function check(){
+	className=document.forms[0].className
+	classSec=document.forms[0].classSec
+	txt=""
+	for (i=0;i<className.length;++ i){
+		if (className[i].checked){
+			txt=txt + className[i].value + " "
+		}
+	}
+	classSec.value="选择培训的内容:" + txt
+}
+</script>
+</head>
+
+<body>
+<form>
+选择你要培训的课程<br><br>
+<input type="checkbox" name="className" value="J2se">J2se 课程<br>
+<input type="checkbox" name="className" value="J2ee">J2ee 课程<br><br>
+<input type="button" name="test" onclick="check()" value="我要培训">
+<br><br>
+<input type="text" name="classSec" size="50">
+</form>
+</body>
+</html>

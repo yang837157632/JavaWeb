@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="scripts/jquery.min.js"></script>
+
+<script>
+	function a(){
+		$("#font").attr({color:"red",size:"30px",face:"华文彩云"});
+	}
+
+	function b(){
+		$("#font").toggleClass("s1");
+	}
+</script>
+
+<style>
+	.s1{
+		font-size:20px;
+		color:blue;
+		font-family:黑体;
+		font-weight:100px;
+	}
+</style>
+</head>
+
+<body>
+	<font id="font">abcdefg</font><br>
+	<input type="button" value="变" onclick="a()"/><br>
+	<input type="button" value="样" onclick="b()"/><br>
+</body>
+</html>
+
+

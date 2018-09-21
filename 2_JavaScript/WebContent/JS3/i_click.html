@@ -1,0 +1,23 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<script>
+			function stateChange()
+			{
+				var bu=document.getElementById("bulb");
+				if(bu.src.match("eg_bulboff")){
+					bu.src="../image/eg_bulbon.gif";
+				}else{
+					bu.src="../image/eg_bulboff.gif";
+				}
+			}			
+		</script>
+	</head>
+
+	<body>
+	
+	<img id="bulb" src="../image/eg_bulboff.gif" 
+		style="cursor:pointer;" onclick="stateChange()"></img>
+
+	</body>
+</html>

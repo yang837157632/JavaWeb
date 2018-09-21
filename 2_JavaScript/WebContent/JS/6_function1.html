@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>function</title>
+</head>
+
+<body>
+
+<h1>空山新雨后</h1><br>
+
+<script type="text/javascript">
+function GetCharCount(textobj){
+	if(textobj.length>10){
+		alert("姓名要少于10字符");
+	}else{
+		alert("你输入了"+textobj.length+"个字符");
+	}
+}
+</script>
+
+请输入你的姓名（少于10字符）
+<input type="text" name="username" onBlur="GetCharCount(username.value)">
+
+</body>
+</html>

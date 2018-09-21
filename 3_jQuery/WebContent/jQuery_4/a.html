@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="scripts/jquery.min.js"></script>
+
+<script>
+	function demo(){
+		var div=$("div");
+		for(i=0;i<div.length;i++){
+			div[i].innerHTML="20";
+		}
+		
+		var input=$("form input");
+		alert(input.val());
+	}
+</script>
+
+</head>
+<body>
+
+	<div>中国金牌榜单</div>
+	
+	<div>中国金牌榜单</div>
+	
+	<div>中国金牌榜单</div>
+	
+	<br>
+	<input type="button" onclick="demo()" value="A" />
+	
+	<form>
+		<input type="button" value="B" />
+	</form>
+
+</body>
+</html>

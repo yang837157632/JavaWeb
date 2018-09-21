@@ -1,0 +1,63 @@
+﻿<html>
+	<head>
+		<script src="scripts/jquery-1.7.2.js"></script>
+		
+		<script>		
+			
+			function a(){		
+				$(":checkbox").attr("checked",true);
+			}
+			
+			function b(){		
+				$(":checkbox").attr("checked",false);
+			}
+			
+			function c(){
+				var a=$(":checkbox[name='sport']:checked");
+				var b=$(":checkbox[name='sport']:not(:checked)");
+				
+				a.attr("checked",false);
+				b.attr("checked",true);
+				
+				if(a.length==0){
+					$(":checkbox[name='checkall']").attr("checked",true);
+				}else{
+					$(":checkbox[name='checkall']").attr("checked",false);
+				}
+			}
+			
+			function d(){
+				var a=$(":checkbox[name='checkall']:checked");
+				if(a.length==1){
+					$(":checkbox[name='sport']").attr("checked",true);
+				}else{
+					$(":checkbox[name='sport']").attr("checked",false);
+				}
+			}
+			
+			function e(){
+				var a=$(":checkbox[name='sport']:checked");
+				if(a.length==4){
+					$(":checkbox[name='checkall']").attr("checked",true);
+				}else{
+					$(":checkbox[name='checkall']").attr("checked",false);
+				}
+			}
+			
+		</script>
+	</head>
+	
+	<body>
+		<p>请选择你的爱好：</p>
+		<input type="checkbox" name="checkall" onclick="d()"/> 全选/全不选<br><br>
+		<input type="checkbox" name="sport" onclick="e()" /> 足球
+		<input type="checkbox" name="sport" onclick="e()" /> 篮球
+		<input type="checkbox" name="sport" onclick="e()" /> 游泳
+		<input type="checkbox" name="sport" onclick="e()" /> 唱歌
+		<br><br>
+		
+		<input type="button" value="全选" onclick="a()"/>
+		<input type="button" value="全不选" onclick="b()"/>
+		<input type="button" value="反选" onclick="c()"/>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript" src="scripts/jquery-1.7.2.js"></script>
+	<script type="text/javascript">
+		function a(obj){
+			var a=$(obj).parent()[0].id;
+			var ind=obj.id.substring(4)-1;
+			if(a.match("city")){
+				var a=$("#city li:eq("+ind+")").clone(true);
+				var b=$("#game li:eq("+ind+")").replaceWith(a);
+				$(obj).replaceWith(b);
+			}else{
+				var a=$("#game li:eq("+ind+")").clone(true);
+				var b=$("#city li:eq("+ind+")").replaceWith(a);
+				$(obj).replaceWith(b);
+			}
+		}
+	</script>
+</head>
+<body>
+
+	<p>你喜欢哪个城市?</p>
+	
+		<ul id="city">
+			<li id="city1" onclick="a(this)">北京</li>
+			<li id="city2" onclick="a(this)">上海</li>
+			<li id="city3" onclick="a(this)">东京</li>
+			<li id="city4" onclick="a(this)">首尔</li>
+		</ul>
+		
+		<br><br>
+		<p>你喜欢哪款单机游戏?</p>
+		<ul id="game">
+			<li id="game1" onclick="a(this)">红警</li>
+			<li id="game2" onclick="a(this)">实况</li>
+			<li id="game3" onclick="a(this)">极品飞车</li>
+			<li id="game4" onclick="a(this)">魔兽</li>
+		</ul>
+		
+		<br><br>
+</body>
+</html>

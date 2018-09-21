@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>checkbox</title>
+
+<script type="text/javascript">
+function check()
+{
+var x=document.forms.myForm
+x[0].checked =true
+}
+function uncheck()
+{
+var x=document.forms.myForm
+x[0].checked =false
+}
+</script>
+</head>
+
+<body>
+<form name="myForm">
+<input type="checkbox" value="on">复选框<br>
+<input type="button" onclick="check()" value="选择">
+<input type="button" onclick="uncheck()" value="取消选择">
+</form>
+</body>
+</html>

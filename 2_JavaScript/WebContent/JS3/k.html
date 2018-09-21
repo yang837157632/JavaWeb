@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<script>
+			var bulbs=document.getElementsByName("bulb");
+			var i=0;
+			var t=0;
+			function start(){
+				if(i<7){
+					bulbs[i].src="../image/eg_bulbon.gif";
+				}else{
+					bulb[i-7].src="../image/eg_bulbon.gif";
+				}
+				i++;
+				if(i>13){
+					i=0;
+				}
+				t=setTimeout('start()',500);
+			}
+			function stop(){
+				clearTimeout(t);
+				for(i=0;i<7;i++){
+					bulb[i].src="../image/eg_bulboff.gif";
+				}				
+			}
+		</script>
+	</head>
+
+	<body>
+	
+	<img name="bulb" src="../image/eg_bulboff.gif" style="cursor:pointer;"></img>
+	<img name="bulb" src="../image/eg_bulboff.gif" style="cursor:pointer;"></img>
+	<img name="bulb" src="../image/eg_bulboff.gif" style="cursor:pointer;"></img>
+	<img name="bulb" src="../image/eg_bulboff.gif" style="cursor:pointer;"></img>
+	<img name="bulb" src="../image/eg_bulboff.gif" style="cursor:pointer;"></img>
+	<img name="bulb" src="../image/eg_bulboff.gif" style="cursor:pointer;"></img>
+	<img name="bulb" src="../image/eg_bulboff.gif" style="cursor:pointer;"></img>
+	<br>
+	<input type="button" onclick="start()" value="Start"/>
+	<input type="button" onclick="stop()" value="Stop"/>
+	<br>
+	</body>
+</html>

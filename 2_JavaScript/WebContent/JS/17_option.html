@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>option</title>
+
+<script type="text/javascript">
+function put()
+{
+txt=document.forms[0].myClass.options[document.forms[0].myClass.selectedIndex].text
+document.forms[0].classSec.value=txt
+}
+</script>
+</head>
+
+<body>
+选择培训课程:<br>
+<form>
+选择你喜欢的课程:
+<select name="myClass" onchange="put()">
+<option>J2me</option>
+<option>J2se</option>
+<option>J2ee</option>
+</select>
+<br><br>
+你选择的课程是: <input type="text" name="classSec" size="20">
+</form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var d=new Date()
+var weekday=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六")
+var monthname=new Array("一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月") 
+document.write("今天是:\t"); 
+document.write(d.getFullYear()+"年")
+document.write(monthname[d.getMonth()] )
+document.write(d.getDate() + "日")
+document.write(weekday[d.getDay()])
+
+</script>
+
+</body>
+</html>

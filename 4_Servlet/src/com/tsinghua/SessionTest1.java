@@ -1,0 +1,57 @@
+package com.tsinghua;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+public class SessionTest1 extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    public SessionTest1() {
+        super();
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		try {
+			
+			request.setCharacterEncoding("utf-8");
+			response.setContentType("text/html;charset=utf-8");
+			response.setCharacterEncoding("utf-8");
+			
+			PrintWriter pw=response.getWriter();
+			
+			//得到和req相关联的session,如果没有就创建session			
+			HttpSession ht=request.getSession(true);
+			
+			//得到session 的id,这是由容器分配的
+			String sessionId=ht.getId();
+			
+			pw.println("sessionTest1 的session id="+sessionId+"<br>");
+						
+			//向session中添加一个属性(String 类型的)			
+			ht.setAttribute("name","Star");
+			
+			//如果不指定时间，那么该session的有效期是30min			
+			//你也可以指定时间,30s
+			ht.setMaxInactiveInterval(30);
+			
+			pw.println("在session中放入了一个属性 name=Star");
+							
+	    }
+	    catch (Exception ex) {
+	    	
+	    	ex.printStackTrace();
+	    }
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		this.doGet(request, response);
+	}
+
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date GMT</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var d = new Date()
+document.write("今天是:<br>");
+document.write(d.getFullYear())		//g/setFullYear(99)	0099年
+document.write("-")					//g/setYear(99)		1999年
+document.write(d.getMonth()+1)		//g/setMonth(3)		4月	0-11
+document.write("-")
+document.write(d.getDate())			//g/setDate(3)		3日	1-31
+document.write("\t")
+document.write(d.getHours())		//g/setHours(3)		3点	0-23
+document.write(":")
+document.write(d.getMinutes())		//g/setMinutes(3)	3分	0-59
+document.write(":")
+document.write(d.getSeconds())		//g/setSeconds(3)	3秒	0-59
+document.write(":")
+document.write(d.getMilliseconds())	//g/setMilliseconds(22)	22毫秒	0-999
+document.write("\t星期"+d.getDay())	//g/setDay(3)	星期三	0-6
+document.write("<br>"+d)
+
+</script>
+
+</body>
+</html>

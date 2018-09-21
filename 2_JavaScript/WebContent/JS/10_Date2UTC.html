@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date UTC</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var d = new Date()
+document.write(d)
+document.write("<br>设定日期:")
+d.setFullYear(2088)
+document.write(d)
+
+document.write("<br>UTC时间:");
+document.write(d.getUTCDay()+"\t")
+document.write(d.getUTCMonth()+1+"\t\t")		//Month
+document.write(d.getUTCDate()+"\t\t")
+document.write(d.getUTCFullYear()+"\t\t")
+document.write(d.getUTCHours()+"\t\t")
+document.write(d.getUTCMinutes()+"\t\t")
+document.write(d.getUTCSeconds())
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form</title>
+
+<script type="text/javascript">
+function formReset()
+{var x=document.forms.myForm;
+x.reset();
+alert("表单已经重置");
+}
+function formSubmit()
+{var x=document.forms.myForm;
+x.submit(); 
+alert("表单已经提交");
+}
+</script>
+</head>
+
+<body>
+<form name="myForm">
+<p>控制表单的提交和重置</p>
+<input type="text" size="20"><br>
+<input type="text" size="20"><br><br>
+<input type="button" onclick="formReset()" value="重置">
+<input type="button" onclick="formSubmit()" value="提交">
+</form>
+</body>
+</html>

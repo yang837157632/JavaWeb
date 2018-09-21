@@ -1,0 +1,48 @@
+﻿<html>
+	<head>
+		<script src="scripts/jquery.min.js"></script>
+		
+		<script>		
+			
+			function a(){		
+				var name=$("#name");
+				var email=$("#email");
+				var phone=$("#phone");
+				var tr=$("<tr></tr>")
+				tr.append("<td onclick='c(this)' align='center'>"+name.val()+"</td>")
+					.append("<td onclick='c(this)' align='center'>"+email.val()+"</td>")
+					.append("<td onclick='c(this)' align='center'>"+phone.val()+"</td>")
+					.append("<td align='center'><a href='javascript:;' onclick='b(this)'>删除</a></td>")					
+					.appendTo($("#table"));
+			}
+			
+			function b(obj){
+				$(obj).parent().parent().remove();
+			}
+			
+			function c(obj){
+				var c=$(obj);
+				var title=$("th:eq("+c.index()+")").text();
+				
+				var newc=prompt("请输入"+title,c.text());
+				c.replaceWith("<td onclick='c(this)'>"+newc+"</td>");
+			}
+			
+		</script>
+	</head>
+	
+	<body>
+		<form align="center">
+			<h2>添加用户</h2>
+			姓名:<input type="text" id="name" />
+			email:<input type="text" id="email" />
+			电话:<input type="text" id="phone" /><br><br>
+			<input type="button" onclick="a()" value="submit">		
+		</form>
+		
+		<table border="1px" align="center" id="table" width="500px">
+			<tr><th>姓名</th><th>email</th><th>电话</th><th>删除</th></tr>
+		</table>
+		
+	</body>
+</html>

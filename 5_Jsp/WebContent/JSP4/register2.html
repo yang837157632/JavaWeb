@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>register</title>
+</head>
+<body>
+
+<form action="registerAction2.jsp" method="post">
+<center>
+	
+	<table border="1px" cellpadding="0" cellspacing="0">
+		<caption>学生信息收集</caption>
+		<tr>
+			<td>学号：</td>
+			<td><input type="text" value="" name="sid"/></td>
+		</tr>
+		<tr>
+			<td>姓名：</td>
+			<td><input type="text" value="" name="sname"/></td>
+		</tr>
+		<tr>
+			<td>年龄：</td>
+			<td><input type="text" value="" name="age"/></td>
+		</tr>
+		<tr>
+			<td>省份：</td>
+			<td><select name="province">
+					<option value="香港" selected>香港</option>
+					<option value="台湾">台湾</option>
+					<option value="上海">上海</option>
+					<option value="北京">北京</option>
+					<option value="大连">大连</option>		
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>性别：</td>
+			<td>
+				男<input type="radio" value="male" checked name="sex"/>
+				女<input type="radio" value="female" name="sex"/>
+			</td>
+		</tr>
+		<tr>
+			<td>学费：</td>
+			<td><input type="text" value="" name="titution"/></td>
+		</tr>
+	
+		<tr>
+			<td colspan="2">
+				<input type="submit" value="提交">
+
+				<input type="reset" value="重置">
+			</td>
+		</tr>
+	</table>
+</center>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>function</title>
+
+<script type="text/javascript">
+function setStatus(){
+	var d=new Date();
+	var time=d.getHours()+"."+d.getMinutes()+"."+d.getSeconds();
+	window.status=time;
+}
+setInterval(setStaus(),1000);	//状态栏
+</script>
+
+</head>
+
+<body onload="setStatus()">
+
+<h1>Hello World</h1>
+
+</body>
+</html>

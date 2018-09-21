@@ -1,0 +1,27 @@
+﻿<html>
+	<head>
+		<script src="scripts/jquery-1.7.2.js"></script>
+		
+		<script>		
+			$(document).ready(function(){
+				$("input").focus(function(){
+					if($(this).val()==this.defaultValue){
+						$(this).val("");
+					}
+				});
+				$("input").focusout(function(){
+					if($(this).val()==""){
+						$(this).val(this.defaultValue);
+					}
+				});
+			});
+			
+		</script>
+	</head>
+	
+	<body>
+		<input type="text" value="Hello Universe" /><br><br>
+		<input type="text" value="Hello Star" /><br><br>
+		<input type="text" value="Hello Earth" /><br><br>
+	</body>
+</html>

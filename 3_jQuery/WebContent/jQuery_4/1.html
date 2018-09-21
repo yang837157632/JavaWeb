@@ -1,0 +1,44 @@
+﻿<html>
+	<head>
+		<script src="scripts/jquery.min.js"></script>
+		<script>
+			function a(){
+				//var len=$("input:checkbox:checked");
+				var len=$(":checkbox[name='sport']:checked");
+				alert(len.length);			
+			}
+			
+			function b(){
+				//var b=$("select :selected");
+				var b=$("select option:selected");
+				alert(b.val());
+			}
+			
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<input type="checkbox" name="sport" />篮球
+			<input type="checkbox" name="sport" />排球
+			<input type="checkbox" name="sport" />羽毛球
+			<input type="checkbox" name="sport" />乒乓球
+		</div>
+		<br>
+		
+		<div>
+			<select>
+				<option>Java</option>
+				<option>c#</option>
+				<option>Matlab</option>
+				<option>Labview</option>
+			</select>
+		</div>
+		<br>
+		
+		<div>
+			<input type="button" value="checkbox选中的个数" onclick="a()"/>
+			<input type="button" value="select选择的内容" onclick="b()"/>
+		</div>
+	</body>
+</html>

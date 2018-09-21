@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	car=new Object();
+	car.name="Rolls-Royce";
+	car.color="red";
+
+	car.type=new Array();
+	car.type[0]=100;
+	car.type[1]=200;
+
+	for(j=0;j<car.type.length;j++){
+		alert(car.type[j]);
+	}
+
+	bus={"name":"Mercedes-Benz","color":"white","type":[{"size":1},{"size":2}]};
+	alert(bus.name+"  "+bus.color);
+	types=bus.type;
+	for(i=0;i<types.length;i++){
+		alert(types[i].size);
+	}
+</script>
+
+</head>
+
+<body>
+
+</body>
+</html>

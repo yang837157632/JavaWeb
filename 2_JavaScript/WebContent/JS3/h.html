@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<script>
+			var i=1;
+			var j=0;
+			function startTime()
+			{
+				if(i==1){
+					j=7;
+				}else{
+					j=i-1;
+				}
+				var bul_light=document.getElementById("bu"+i);
+				var bul_dark=document.getElementById("bu"+j);
+				
+				bul_light.src="../image/eg_bulbon.gif";
+				bul_dark.src="../image/eg_bulboff.gif";
+				
+				if(i==7){
+					i=1;
+				}else{
+					i++;
+				}
+				t=setTimeout('startTime()',500);
+			}			
+		</script>
+	</head>
+
+	<body>
+	
+	<img id="bu1" src="../image/eg_bulboff.gif" width="50px" height="100px"></img>
+	<img id="bu2" src="../image/eg_bulboff.gif" width="50px" height="100px"></img>
+	<img id="bu3" src="../image/eg_bulboff.gif" width="50px" height="100px"></img>
+	<img id="bu4" src="../image/eg_bulboff.gif" width="50px" height="100px"></img>
+	<img id="bu5" src="../image/eg_bulboff.gif" width="50px" height="100px"></img>
+	<img id="bu6" src="../image/eg_bulboff.gif" width="50px" height="100px"></img>
+	<img id="bu7" src="../image/eg_bulboff.gif" width="50px" height="100px"></img>
+	<br>
+	<input type="button" onclick="startTime()" value="Show Time"/>
+		<br>
+	</body>
+</html>

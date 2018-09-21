@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date function</title>
+</head>
+<body>
+
+<script type="text/javascript">
+function refresh()
+{
+window.location.reload()
+}
+</script>
+
+<script type="text/javascript">
+var d = new Date() 
+document.write("当前时间是:");
+document.write(d.getHours())
+document.write(".")
+document.write(d.getMinutes())
+document.write(".")
+document.write(d.getSeconds())
+</script>
+
+<form>
+<input type="button" value="刷新页面" onclick="refresh()">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Array</title>
+
+<script type="text/javascript">
+	var famname = new Array( "Peter", "Tom", "Vicky", "Jet" );
+	document.write("字符串长度:\t\t");
+	document.write(famname.length + "<br><br>");
+	
+	document.write("使用.链接成一个字符串:\t\t");
+	document.write(famname.join(" * ") + "<br><br>");
+	
+	document.write("使数组中的元素反序排列:\t\t");
+	document.write(famname.reverse() + "<br><br>");
+	
+	document.write("在使数组中的增加两个元素,返回数组长度:\t\t");
+	document.write(famname.push("Ola", "Jon") + "<br>")//可增加任意个
+	document.write(famname.join(" # ") + "<br><br>")
+	
+	document.write("取出最后一个元素,数组长度减少:\t\t");
+	document.write(famname.pop()+"<br>");	//删除最后一个元素
+	document.write(famname.join(" @ ") + "<br><br>");
+	
+	document.write("取出开始的元素,数组长度减少:\t\t");
+	document.write(famname.shift()+"<br>");	//删除第一个元素
+	document.write(famname.join(".") + "<br><br>");
+
+	for( n in famname )						// 逐个输出数组中的名字
+	{document.write( famname[n] + "\t" );	// 将名字写入当前文档流中
+	}
+</script>
+
+</head>
+
+<body>
+	<p>数组应用</p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<script src="scripts/jquery.min.js"></script>
+		<script>
+		
+			function a(){
+				var a = $("p:contains('jerry')");
+				a.attr("style","color:red");
+			}
+			
+			function b(){
+				var b = $("p:visible");
+				b.attr("style","display:none;");
+			}
+			
+			function c(){
+				var c = $("p:hidden");
+				c.attr("style","display:block;");
+			}
+			
+		</script>
+		
+		<style>
+			.dis{
+				display:none;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="div01">
+			<p>jerry</p>
+			<p>jhon</p>
+			<p class="dis">tom</p>
+		</div>
+		
+		<div>
+			<input type="button" value="A" onclick="a()"/> 
+			<input type="button" value="B" onclick="b()"/>
+			<input type="button" value="C" onclick="c()"/> 
+		</div>
+	</body>
+</html>

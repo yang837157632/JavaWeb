@@ -19,6 +19,7 @@ import java.net.URL;
  */
 
 
+
 public class Animation extends Applet implements Runnable {
 	Image igs[];  //用于装载组成GIF动画的JPG图片
 
